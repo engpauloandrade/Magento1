@@ -63,14 +63,26 @@ networks:
   default:
     name: magento_network
 ```
-### 4. Logar no Localhost e verificar se o Nginx está instalado com sucesso
 
-Caso esteja instalado com sucesso, deverá aparecer a imagem abaixo:
+### 4. Executando o comando para iniciar os containers
+
+```
+docker-compose up -d
+```
+
+Execute o comando acima no diretório onde está o `docker-compose.yml` e pronto, as imagens serão carregadas e os containers
+iniciados
+
+### 5. Logar no Localhost e verificar se o Nginx está instalado com sucesso
+
+Após inicializar os containers, digite `http://localhost` no nagegador.
+
+Caso o Nginx esteja instalado com sucesso, deverá aparecer algo como a imagem abaixo:
 
 ![Welcome to nginx!](image.png)
 
 
-### 5. Verificar se os arquivos Magento estão dentro de `/var/www/html`
+### 6. Verificar se os arquivos Magento estão dentro de `/var/www/html`
 
 Execute os comandos abaixo no seu powershell
 
@@ -85,13 +97,13 @@ Precisa aparecer algo como:
 ![Arquivos do Magento](image-1.png)
 
 
-### 6. Instalando o nano
+### 7. Instalando o nano
 
 ```
 apt-get install nano
 ```
 
-### 7. Abrindo o arquivo do apache2 e verificar os sites disponíveis
+### 8. Abrindo o arquivo do apache2 e verificar os sites disponíveis
 
 ```
 nano /etc/apache2/sites-available/000-default.conf
