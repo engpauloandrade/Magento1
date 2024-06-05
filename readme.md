@@ -76,7 +76,7 @@ iniciados
 
 ### 5. Logar no Localhost e verificar se o Nginx está instalado com sucesso
 
-Após inicializar os containers, digite `http://localhost` no nagegador.
+Após inicializar os containers, digite `http://localhost` no navegador.
 
 Caso o Nginx esteja instalado com sucesso, deverá aparecer algo como a imagem abaixo:
 
