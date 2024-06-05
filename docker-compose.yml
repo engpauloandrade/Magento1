@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  magento:
+    image: alexcheng/magento:1.9.3.8
+    container_name: magento
+    ports:
+      - "80:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: magento
+      MYSQL_USER: magento
+      MYSQL_PASSWORD: magento
+    volumes:
+      - magento_data:/var/www/html
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mysql:5.7
+    container_name: magento_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: magento
+      MYSQL_USER: magento
+      MYSQL_PASSWORD: magento
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  magento_data:
+  db_data:
+
+networks:
+  default:
+    name: magento_network
