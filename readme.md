@@ -11,15 +11,16 @@ Este projeto configura um ambiente Docker para executar o Magento 1.9 com um ban
 
 ### 1. Preparar o Ambiente
 
-Certifique-se de que o Docker Desktop está instalado e funcionando no seu sistema Windows. Crie a pasta `C:\DockerOpenSource` se ela ainda não existir.
+Certifique-se de que o Docker Desktop está instalado e funcionando no seu sistema Windows.
+Se não tiver, faça o download aqui: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-### 2. Criando o diretório para colocar os arquivos
+### 2. Clonando o repositório
 
-Crie uma pasta com o nome que desejar. Eu criei com o seguinte nome: `magento-docker`
+Clone esse repositório com `git clone https://github.com/engpauloandrade/Magento1.git`
 
-### 3. Criar o arquivo `docker-compose.yml` dentro de `magento-docker`
+### 3. Executar o arquivo `docker-compose.yml` dentro de `magento-docker`
 
-Crie um arquivo chamado `docker-compose.yml` com o seguinte conteúdo:
+Verifique se o arquivo `docker-compose.yml` contém o seguinte conteúdo:
 
 ```yaml
 version: '3.7'
