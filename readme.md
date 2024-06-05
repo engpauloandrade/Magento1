@@ -100,11 +100,15 @@ Precisa aparecer algo como:
 
 ### 7. Instalando o nano
 
+Ainda dentro do exec do docker, execute o comando abaixo:
+
 ```
 apt-get install nano
 ```
 
 ### 8. Abrindo o arquivo do apache2 e verificar os sites disponíveis
+
+Ainda dentro do exec do docker, execute o comando abaixo:
 
 ```
 nano /etc/apache2/sites-available/000-default.conf
@@ -115,4 +119,6 @@ Precisa aparecer algo como:
 ![Sites disponíveis](image-2.png)
 
 
-##### Pronto, agora basta digitar webmaster@localhost e irá aparecer a tela de configuração do Magento
+##### Pronto, agora basta digitar `webmaster@localhost` e irá aparecer a tela de configuração do Magento
+
+
